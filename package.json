@@ -1,0 +1,24 @@
+{
+  "name": "tenant-key-lifecycle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx src/tenant_control_plane.ts",
+    "demo": "node --env-file-if-exists=.env --import tsx src/onboard_tenant.ts",
+    "test": "node --import tsx --test test/tenant_lifecycle.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MIT"
+}
